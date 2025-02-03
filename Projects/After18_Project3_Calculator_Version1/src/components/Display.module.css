@@ -1,0 +1,10 @@
+.display{
+    display:flex;
+    justify-self: center;
+    width:85%;
+    font-size: 25px;
+    margin-bottom: 30px;
+    background-color: rgb(147, 243, 198);
+    border:2px solid white;
+    color:black;
+}

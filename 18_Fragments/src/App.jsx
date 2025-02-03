@@ -3,6 +3,7 @@ import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import FoodItems from './components/FoodItems';
 import ErrorMessage from './components/ErrorMessage';
+import Container from './components/Container';
 
 function App() {
   // jsx me sirf ek hi element render kar skte h to multiple ke lye unhe wrap karna padta tha but through React.Fragment wo dhang se run bhi hoga but browser me koi nya element add bhi nhi hoga y fir <></> use karo same...
@@ -21,14 +22,17 @@ function App() {
   //ab usko use karlo kaise ke liye FoodItems.jsx....
 
 
+  // agar hm kisi element  ke parent ki tarah koi element use karenge aur usme wo child div pass karne ke bjae jaise yha Container me kiya sidha kuch return kare to andar ka sab ud jaega to wo sab ya to individually as props pass kar skte h ya to sidha likh to props.children
+
+
   let foodItems = ["Dal", "first", "second", "third", "oneItem", "goodOne"];
  
   return (
-    <React.Fragment>
+    <Container>
       <h1>Healthy Food</h1>
       <ErrorMessage items={foodItems} />
       <FoodItems items={foodItems} />
-</React.Fragment>
+</Container>
   )
 }
 

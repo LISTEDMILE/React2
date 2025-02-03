@@ -1,0 +1,25 @@
+body{
+    background-color: beige;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100vw;
+    margin:0px;
+    padding-top: 40px;
+}
+
+.calculator{
+    border: 1px solid rgba(0, 0, 0, 0.411);
+    width:200px;
+    border-radius: 5px;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    padding:20px;
+    background-color: white;
+    border-radius: 5px;
+  
+}
+
+
+
