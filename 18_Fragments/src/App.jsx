@@ -16,6 +16,10 @@ function App() {
   // direct aise bhi parameter le skte h Item.jsx me Item=({foodItem}) karke aise destructure ho jaega ab props. karke use nhi karna hoga
 
 
+  // react me ek hi css file me poora sab likhna padta h to bohot mess ho jata h to uske liye hm use karte h css module koi bhi file ka nam.modules.css se save karo
+  // normal import ki jagah import karo as object see FoodItems.jsx
+  //ab usko use karlo kaise ke liye FoodItems.jsx....
+
 
   let foodItems = ["Dal", "first", "second", "third", "oneItem", "goodOne"];
  
