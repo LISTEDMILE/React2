@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { MdAddCard } from "react-icons/md";
 
 function AddTodo({ onNewItem }) {
   
@@ -43,7 +44,7 @@ function AddTodo({ onNewItem }) {
             className="btn btn-success thisButton"
             onClick={handleAddButtonClicked}
           >
-            Add
+            <MdAddCard/>
           </button>
         </div>
       </div>

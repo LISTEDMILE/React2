@@ -8,26 +8,11 @@ import { useState } from "react";
 function App() {
   // hm cheezo ko components ki tarah use kar skte hai jaise yha components me tod liya....
   // hm ek element ko do className bhi de skte h space lgake...
-  const IIIItodoItems = [
-    {
-      name: "Buy Milk",
-      dueDate: "4/10/2023",
-    },
-    {
-      name: "Go to College",
-      dueDate: "3/3/2024",
-    },
-    {
-      name: "Buy Milk",
-      dueDate: "4/10/2023",
-    },
-    {
-      name: "Go to College",
-      dueDate: "3/3/2024",
-    },
-  ];
 
-  const [todoItems, setTodoItems] = useState(IIIItodoItems);
+  // we can use react icon steps on website....
+    
+
+  const [todoItems, setTodoItems] = useState([]);
   
   const onNewItem = (itemName, itemDueDate) => {
     const newTodoItems = [...todoItems,
