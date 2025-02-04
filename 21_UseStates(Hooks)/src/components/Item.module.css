@@ -1,0 +1,16 @@
+.Span{
+  color:orange;
+  font-weight: 800;
+  font-size: xx-large;
+}
+
+.button{
+  background-color: rgba(255, 68, 0, 0.555);
+  color:white;
+  width:60px;
+  height:40px;
+  border-radius: 5px;
+  border:none;
+  margin-left:30px;
+  float:right;
+}
