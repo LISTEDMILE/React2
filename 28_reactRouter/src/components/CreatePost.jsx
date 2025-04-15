@@ -1,8 +1,12 @@
 import { useContext } from "react";
 import { PostList } from '../store/postListStore'
 import { useRef } from "react";
+import { useNavigate } from "react-router-dom";
 
 const CreatePost = () => {
+
+  const navigate = useNavigate();
+
   const userIdElement = useRef();
   const titleElement = useRef();
   const bodyElement = useRef();
@@ -11,6 +15,7 @@ const CreatePost = () => {
   const tagsElement = useRef();
 
   const { addPost } = useContext(PostList);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const userId = userIdElement.current.value;
@@ -18,7 +23,7 @@ const CreatePost = () => {
     const postBody = bodyElement.current.value;
     const postReactions = reactionsElement.current.value;
     const postDislikeReactions = reactionsDislikeElement.current.value;
-    const postTags = tagsElement.current.value.split();
+    const postTags = tagsElement.current.value.split(" ");
 
     userIdElement.current.value = "";
     titleElement.current.value = "";
@@ -44,10 +49,10 @@ const CreatePost = () => {
     })
     .then(res => res.json())
       .then(res => {
-        console.log(res)
         addPost(res);
-        
-       });
+        navigate('/');
+      });
+    
 
     
   };

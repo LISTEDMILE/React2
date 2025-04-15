@@ -32,12 +32,7 @@ const PostListProvider = ({ children }) => {
       // used to abort api call if we want
       const controller = new AbortController();
       const signal = controller.signal;
-      fetch("https://dummyjson.com/posts", { signal })
-        .then((res) => res.json())
-        .then(data => {
-          addInitialPosts(data.posts);
-          setFetching(false);
-        });
+      
       return () => {
         controller.abort();
       }

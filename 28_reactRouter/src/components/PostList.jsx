@@ -26,4 +26,12 @@ const PostList = () => {
   );
 };
 
+export const postLoader = () => {
+  fetch("https://dummyjson.com/posts", { signal })
+        .then((res) => res.json())
+        .then(data => {
+          return data.posts;
+        });
+}
+
 export default PostList;
