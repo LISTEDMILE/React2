@@ -8,8 +8,6 @@ export const PostList = createContext({
   deletePost: () => {},
 });
 
-
-
 const postListReducer = (currPostList, action) => {
   let newPostList = currPostList;
   if (action.type === "DELETE_POST") {
@@ -27,26 +25,7 @@ const postListReducer = (currPostList, action) => {
 const PostListProvider = ({ children }) => {
 
   
-    const [fetching, setFetching] = useState(false);
-    useEffect(() => {
-      setFetching(true);
-  
-      // used to abort api call if we want
-      const controller = new AbortController();
-      const signal = controller.signal;
-      fetch("https://dummyjson.com/posts")
-        .then((res) => res.json())
-        .then(data => {
-          addInitialPosts(data.posts);
-          setFetching(false);
-        });
-      
-      return () => {
-        controller.abort();
-      }
-    }, []);
-  
-  
+    
   
   
   
@@ -77,7 +56,7 @@ const PostListProvider = ({ children }) => {
   };
   return (
     <PostList.Provider
-      value={{ postList, addPost, deletePost , fetching}}
+      value={{ postList, addPost, deletePost }}
     >
       {children}
     </PostList.Provider>
